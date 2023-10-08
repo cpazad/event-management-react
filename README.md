@@ -9,3 +9,6 @@ Live Link:
     4. Users will allow to login with google account besides their email
     5. This website full responsive mobile, tablet and desktop
 
+Note: Questio and Answer page added with this site. 
+[questions_and_answers.md](questions_and_answers.md)
+

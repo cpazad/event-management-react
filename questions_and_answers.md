@@ -20,7 +20,8 @@ console.log(greetign);
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i> console log will return A: '{}'</i>
+<i>Looks like there is a typo with variable (not important)</i>
 
 </p>
 </details>
@@ -45,7 +46,9 @@ sum(1, "2");
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>Answer- C:`"12"`</i>
+<i>JavaScript performs type coercion and converts the number to a string before performing the addition operation.</i>
+<i> JavaScript is a dynamically-typed language, and in the expression a + b, if one of the operands is a string, JavaScript will perform string concatenation instead of numerical addition. </i>
 
 </p>
 </details>
@@ -71,7 +74,8 @@ console.log(food);
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>Answer - A: `['🍕', '🍫', '🥑', '🍔']` </i>
+<i>Looks like a trick question, despite all the information console.log only 'food'</i>
 
 </p>
 </details>
@@ -96,7 +100,8 @@ console.log(sayHi());
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>Answer - B: `Hi there, undefined`</i>
+<i> The function was called without any arguent, thought it require a parameter for name </i>
 
 </p>
 </details>
@@ -124,7 +129,8 @@ console.log(count);
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>Answer: C:3</i>
+<i> The count will + 1 three times based on the num array values are truthy or falsy. Though there were 4 numbers in the 'num' array, the first one is '0' is a falsy value. that's why  count was +1 three time as the remain number of array are truthy </i>
 
 </p>
 </details>
