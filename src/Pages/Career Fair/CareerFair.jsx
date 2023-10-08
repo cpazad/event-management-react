@@ -1,8 +1,11 @@
+import Header from "../../Components/Header/Header"
 
 
 const CareerFair = () => {
   return (
-    <div>CareerFair</div>
+    <div>
+        <Header pageName="Career Fair"></Header>
+    </div>
   )
 }
 
