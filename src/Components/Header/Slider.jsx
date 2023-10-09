@@ -11,9 +11,9 @@ const Slider = () => {
       cancelOnInteraction={false} // should stop playing on user interaction
       interval={6000}
     >
-      <div data-src="public\Edu_1.jpg" />
-      <div data-src="public\Edu_4.jpg" />
-      <div data-src="public\Edu_3.jpg" />
+      <div data-src="edu_1.jpg" />
+      <div data-src="edu_4.jpg" />
+      <div data-src="edu_3.jpg" />
     </AutoplaySlider>
   );
 };

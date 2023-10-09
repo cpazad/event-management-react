@@ -8,7 +8,7 @@ const CareerFair = () => {
         <div className="hero my-10 bg-base-200">
           <div className="hero-content flex-col lg:flex-row">
             <img
-              src="public\edu_3.jpg"
+              src="edu_3.jpg"
               className="max-w-sm rounded-lg shadow-2xl"
             />
             <div className="w-96">
@@ -38,7 +38,7 @@ const CareerFair = () => {
               </p>
               <button className="btn btn-primary">Get Started</button>
             </div>
-            <img className="mask mask-squircle w-1/2" src="public\edu_1.jpg" />
+            <img className="mask mask-squircle w-1/2" src="edu_1.jpg" />
           </div>
         </div>
       </div>

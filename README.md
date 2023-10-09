@@ -1,5 +1,7 @@
 # React-cpazad-Eventmgt-Education
-Live Link: 
+Live Link:https://react-cpazd-eventmgt.web.app/
+sample username: ericmar123@gmail.com
+pass: freedom@#600 
 
 ### Five Features about this Website:
 
