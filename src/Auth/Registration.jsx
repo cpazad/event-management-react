@@ -1,10 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
+import { toast } from "react-toastify";
 
 
 const Registration = () => {
   const {createUser}= useContext(AuthContext)
+  const location = useLocation()
+  const navigate = useNavigate()
     const HandleRegistration = e => {
         e.preventDefault()
         const formData = new FormData(e.currentTarget)
@@ -12,13 +15,22 @@ const Registration = () => {
         const email = formData.get('email')
         const password = formData.get('password')
         console.log(name, email, password)
-        createUser(email, password)
-        .then(result => {
-            console.log(result.user)
-        })
-        .catch(error =>{
-            console.error(error)
-        })
+
+        if(!/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/.test(password)){
+          toast.error("Minimum six characters, at least one letter, one number and one special character");
+        }else{
+          createUser(email, password)
+          .then(result => {
+              console.log(result.user)
+              toast("Registration Successful");
+              navigate(location?.state ? location.state : "/");
+          })
+          .catch(error =>{
+              console.error(error)
+              toast.error("Minimum six characters, at least one letter, one number and one special character");
+          })
+        }
+        
     
       }
     return (

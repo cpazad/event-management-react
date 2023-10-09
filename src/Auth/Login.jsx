@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 
 const Login = () => {
@@ -20,9 +21,12 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         navigate(location?.state ? location.state : "/");
+        toast("Login Successful");
+
       })
       .catch((error) => {
         console.error(error);
+        toast.error("Wrong email or Password");
       });
   };
 

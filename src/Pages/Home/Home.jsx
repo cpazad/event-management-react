@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import Banner from "../../Components/Header/Banner";
 import Event from "../../Components/Partials/Event";
+import Blog from "../Blogs/Blog";
+import Carousel from "../../Components/Partials/Carousel";
 
 
 const Home = () => {
@@ -20,6 +22,13 @@ const Home = () => {
         {
             events.map((event,index) =><Event key={index} event={event}></Event>)
         }
+      </div>
+      <div>
+        <h3 className="text-4xl font-extrabold mb-3">Latest Blogs </h3>
+        <Blog></Blog>
+      </div>
+      <div>
+        <Carousel></Carousel>
       </div>
     </div>
   );

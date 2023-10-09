@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const handleSignOut = () => {
     logOut().then().catch();
   };
+
   const navLinks = (
     <>
       <li>
@@ -22,17 +24,21 @@ const Navbar = () => {
             {" "}
             <NavLink to="/careerfair"> Career Fair </NavLink>
           </li>
+          <li>
+            {" "}
+            <NavLink to="/blogs"> Blogs </NavLink>
+          </li>
         </>
       )}
 
-      <li>
+      {/* <li>
         {" "}
         <NavLink to="/login"> login </NavLink>
       </li>
       <li>
         {" "}
         <NavLink to="/registration"> Registration </NavLink>
-      </li>
+      </li> */}
     </>
   );
 

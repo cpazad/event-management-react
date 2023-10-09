@@ -12,7 +12,7 @@ const Slider = () => {
       interval={6000}
     >
       <div data-src="public\Edu_1.jpg" />
-      <div data-src="public\Edu_2.jpg" />
+      <div data-src="public\Edu_4.jpg" />
       <div data-src="public\Edu_3.jpg" />
     </AutoplaySlider>
   );
