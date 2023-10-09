@@ -20,7 +20,7 @@ const About = () => {
               </p>
               <button className="btn btn-primary">Get Started</button>
             </div>
-            <img className="mask mask-squircle w-1/2" src="public\edu_4.jpg" />
+            <img className="mask mask-squircle w-1/2" src="edu_4.jpg" />
           </div>
         </div>
       </div>
