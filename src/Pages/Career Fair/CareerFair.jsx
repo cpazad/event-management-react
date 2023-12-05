@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet-async";
 import Header from "../../Components/Header/Header";
 
 const CareerFair = () => {
   return (
     <div>
+      <Helmet>
+        <title> The Professor | Career Fair </title>
+      </Helmet>
       <Header pageName="Career Fair"></Header>
       <div>
         <div className="hero my-10 bg-base-200">

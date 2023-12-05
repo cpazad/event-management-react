@@ -6,7 +6,7 @@ const Event = ({ event }) => {
   return (
     <div className="card card-compact w-96 bg-base-100 shadow-xl rounded-sm m-5">
       <figure>
-        <img src={image} alt={eventName} />
+        <img className="object-cover h-48 w-96" src={image} alt={eventName} />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{eventName}</h2>

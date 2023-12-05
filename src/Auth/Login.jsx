@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -44,6 +45,9 @@ const Login = () => {
 
   return (
     <div>
+      <Helmet>
+        <title> The Professor | Login </title>
+      </Helmet>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col w-[400px] ">
           <div className="text-center lg:text-left">
@@ -74,14 +78,10 @@ const Login = () => {
                   className="input input-bordered"
                   required
                 />
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
+             
               </div>
               <div className="form-control mt-3">
-                <button className="btn btn-primary">Login</button>
+                <button className="btn btn-neutral">Login</button>
               </div>
             </form>
             <div className="px-5 mx-3">
