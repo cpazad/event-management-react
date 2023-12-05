@@ -1,7 +1,6 @@
 # React-cpazad-Eventmgt-Education
 Live Link:https://react-cpazd-eventmgt.web.app/
-sample username: ericmar123@gmail.com
-pass: freedom@#600 
+
 
 ### Five Features about this Website:
 
@@ -11,6 +10,6 @@ pass: freedom@#600
     4. Users will allow to login with google account besides their email
     5. This website full responsive mobile, tablet and desktop
 
-Note: Questio and Answer page added with this site. 
+Note: Question and Answer page : 
 [questions_and_answers.md](questions_and_answers.md)
 
