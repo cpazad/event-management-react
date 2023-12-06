@@ -7,12 +7,15 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import PropTypes from "prop-types";
 import app from "../Firebase/Firebase.config";
 
 export const AuthContext = createContext(null);
+
 const googleProvider = new GoogleAuthProvider()
+
 const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
@@ -37,6 +40,14 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signOut(auth);
   };
+   // Update user profile function
+
+   const handleUpdateProfile = (name, photo) => {
+    return updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL: photo,
+    });
+  };
 
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -48,7 +59,7 @@ const AuthProvider = ({ children }) => {
     };
   }, []);
 
-  const AuthInfo = { user, loading, createUser, signIn, signInWithGoogle, logOut };
+  const AuthInfo = { user, loading, createUser, signIn, signInWithGoogle, logOut,handleUpdateProfile };
   return (
     <AuthContext.Provider value={AuthInfo}>{children}</AuthContext.Provider>
   );

@@ -1,11 +1,15 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { FaCartArrowDown } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const handleSignOut = () => {
-    logOut().then().catch();
+    logOut().then(
+      toast("Logout Successful")
+    ).catch();
   };
 
   const navLinks = (
@@ -75,11 +79,25 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-          <div className="w-10 rounded-full">
-            <img src="user.png" />
-          </div>
-        </label>
+      {user && (
+            <>
+              <div className="flex justify-center items-center">
+                <p>Welcome! {user.displayName}</p>
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                  <div className="w-10 rounded-full">
+                    <img src={user.photoURL} alt={user.displayName} />
+                  </div>
+                </label>
+              </div>
+
+              <Link to="/mycart">
+                <a className="btn btn-sm btn-outline border-black text-black rounded-sm mr-2">
+                  {" "}
+                  <FaCartArrowDown></FaCartArrowDown>{" "}
+                </a>
+              </Link>
+            </>
+          )}
         {user ? (
           <button
             onClick={handleSignOut}
